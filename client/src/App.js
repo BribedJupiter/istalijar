@@ -1,7 +1,8 @@
 import './App.css';
 import React from "react";
-import logo from './assets/logo.svg';
+import headshot from './assets/headshot.jpg';
 import Copyright from './copyright';
+import FunnyDetector from './funnyDetector';
 
 /*
   Server runs on port 3001
@@ -18,13 +19,15 @@ function App() {
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
-    
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={headshot} className="App-logo" alt="logo" />
         <p>
           {!data ? "Loading..." : data}
+          <br/>
+          <FunnyDetector/>
         </p>
       </header>
       <body className='App-body'>
