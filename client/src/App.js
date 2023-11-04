@@ -3,6 +3,7 @@ import React from "react";
 import headshot from './assets/headshot.jpg';
 import Copyright from './copyright';
 import FunnyDetector from './funnyDetector';
+import Menubar from './menubar';
 
 /*
   Server runs on port 3001
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <br/>
         <img src={headshot} className="App-logo" alt="logo" />
         <p>
           {!data ? "Loading..." : data}
@@ -31,6 +33,7 @@ function App() {
         </p>
       </header>
       <body className='App-body'>
+        <Menubar/>
         <Copyright year={2023}/>
       </body>
     </div>

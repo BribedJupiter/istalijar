@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function FunnyDetector({joke}) {
+    const [funny, setFunny] = useState("nah bruh"); // set intial state to empty string
+
+    // Notice handler defined inside function
     function handleClick() {
-        alert("Nope!");
+        alert(funny);
     }
 
     return (
